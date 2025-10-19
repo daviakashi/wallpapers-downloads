@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpapers & Jogos Leves</title>
+    <link rel="stylesheet" href="01.css">
+</head>
+<body>
+
+<header>
+    <h1>Wallpapers & Jogos Leves</h1>
+    <nav>
+        <a href="#wallpapers">Wallpapers</a>
+        <a href="#jogos">Jogos</a>
+    </nav>
+</header>
+
+<section id="wallpapers">
+    <h2>Wallpapers</h2>
+    <div class="container">
+        <div class="card">
+            <img src="wallpapers/imagem_01.jpg.png" alt="Wallpaper Natureza" onclick="abrirModal('wallpapers/imagem_01.jpg.png')">
+            <p>anime (one piece) 01</p>
+            <a href="wallpapers/imagem_01.jpg.png" download>
+                <button>Baixar</button>
+            </a>
+        </div>
+
+         <div class="card">
+            <img src="wallpapers/imagem_02.jpg.jpeg" alt="Wallpaper Natureza" onclick="abrirModal('wallpapers/imagem_02.jpg.jpeg')">
+            <p>anime (one piece) 02</p>
+            <a href="wallpapers/imagem_02.jpg.jpeg" download>
+                <button>Baixar</button>
+            </a>
+    </div>
+
+    <div class="card">
+            <img src="wallpepers/imagem_01.jpg.png" alt="Wallpaper Natureza" onclick="abrirModal('wallpepers/imagem_01.jpg.png')">
+            <p>Wallpaper Natureza</p>
+            <a href="wallpepers/imagem_01.jpg.png" download>
+                <button>Baixar</button>
+            </a>
+    </div>
+</section>
+
+<section id="jogos">
+    <h2>Jogos</h2>
+    <div class="container">
+        <div class="card">
+            <img src="jogos/game1.jpg" alt="Jogo Puzzle" onclick="abrirModal('jogos/game1.jpg')">
+            <p>Jogo Puzzle</p>
+            <button onclick="startDownload('jogos/game1.zip')">Baixar</button>
+        </div>
+
+        <div class="card">
+            <img src="jogos/game2.jpg" alt="Jogo Arcade" onclick="abrirModal('jogos/game2.jpg')">
+            <p>Jogo Arcade</p>
+            <button onclick="startDownload('jogos/game2.zip')">Baixar</button>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Overlay de anúncio -->
+<div id="adOverlay">
+    <p>Seu download estará disponível em <span id="countdown">5</span> segundos...</p>
+</div>
+
+<!-- Modal de visualização -->
+<div id="modal" class="modal">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <img class="modal-conteudo" id="imgModal">
+</div>
+
+<script src="01script.js"></script>
+</body>
+</html>
